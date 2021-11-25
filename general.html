@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/menu.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container-two-colums">
+
+        <div>
+            <h2>Agregar producto</h2>
+            <form id="send-form">
+                <input type="text" name="name" placeholder="Nombre producto" required>
+                <input type="text" name="stock" placeholder="Stock producto" required>
+                <input type="text" name="precio" placeholder="Precio producto" required>
+                <input type="text" name="selectMarca" placeholder="Marca producto" required>
+                <!-- <input type="number" name="categoria" placeholder="Categoria producto" required> -->
+                <select name="categoria" id="">
+                    <option value="1">Vegetal</option>
+                    <option value="2">Fruta</option>
+                    <option value="3">Enlatados</option>
+                    <option value="4">Lacteos</option>
+                </select>
+
+                <input type="hidden" name="id">
+                <input type="submit" name="send" value="Enviar">
+            </form>
+
+        </div>
+
+        <div>
+            <h2>Low stock</h2>
+            <table id="tr-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Stock</th>
+                    <th>Marca</th>
+                </tr>
+
+                <tr>
+                    <template id="table-list-high">
+
+                <tr class="tr-template-high">
+                    <td class="td-id"></td>
+                    <td class="td-nombre"></td>
+                    <td class="td-stock"></td>
+                    <td class="td-marca"></td>
+
+                </tr>
+
+                </template>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="search">
+        <div class="buscadorbonito">
+            <input class="input-search" type="search" placeholder="Buscar">
+            <button class="boton-buscar">Buscar</button>
+        </div>
+    </div>
+
+    <div>
+
+        <table class="tablaProductos">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Precio producto</th>
+                <th>Marca producto</th>
+                <th>Categoria producto</th>
+                <th>Acciones</th>
+            </tr>
+
+            <tr>
+                <template id="table-list">
+
+
+
+            <tr class="tr-template">
+                <td class="td-id"></td>
+                <td class="td-nombre"></td>
+                <td class="td-stock"></td>
+                <td class="td-precio"></td>
+                <td class="td-marca"></td>
+                <td class="td-categoria"></td>
+                <td>
+                    <button class="edit">Editar</button>
+                    <button class="delete">Eliminar</button>
+                </td>
+            </tr>
+
+            </template>
+
+
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js" type="module"></script>
+</body>
+
+</html>
